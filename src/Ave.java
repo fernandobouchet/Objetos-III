@@ -1,5 +1,3 @@
-import java.util.Random;
-
 abstract class Ave {
     int energia = 2;
     int kmsRecorridos = 0;
