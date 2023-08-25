@@ -5,6 +5,10 @@ public class Golondrina extends Ave {
     private boolean yaPesco = false;
     private int intentosDePesca = 0;
 
+    public Golondrina(String nombre) {
+        super(nombre);
+    }
+
     public void hacerMejorPescador() {
         esMejorPescador = true;
     }

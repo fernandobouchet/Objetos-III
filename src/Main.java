@@ -1,10 +1,10 @@
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        Golondrina Pepita = new Golondrina();
-        Golondrina Pepon = new Golondrina();
+        Golondrina Pepita = new Golondrina("Pepita");
+        Golondrina Pepon = new Golondrina("Pepon");
         Pepon.hacerMejorPescador();
-        Paloma Bombon = new Paloma();
+        Paloma Bombon = new Paloma("Bombon");
         Pepita.comer(5);
         Pepita.volar(1);
         Pepita.comer(20);

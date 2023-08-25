@@ -2,6 +2,12 @@ abstract class Ave {
     int energia = 2;
     int kmsRecorridos = 0;
 
+    String nombre;
+
+    public Ave(String nombre) {
+        this.nombre = nombre;
+    }
+
     public void comer(int gramos) {
         energia += gramos;
     }
