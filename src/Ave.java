@@ -1,6 +1,6 @@
-abstract class Ave {
-    int energia = 2;
-    int kmsRecorridos = 0;
+abstract class Ave implements ComerYVolar {
+    protected int energia = 2;
+    protected int kmsRecorridos = 0;
     Logger log;
     String nombre;
 
@@ -9,6 +9,7 @@ abstract class Ave {
         this.log = log;
     }
 
+    @Override
     public void comer(int gramos) {
         energia += gramos;
         log.showInfo(this.nombre + " comió " + gramos + " gramos, su energia aumentó a " + energia);
@@ -16,6 +17,7 @@ abstract class Ave {
     private boolean puedeVolar(int kilometros) {
         return kilometros * 3 < energia;
     }
+    @Override
     public void volar(int kilometros) throws Exception {
         if(energia <= 0 || !this.puedeVolar(kilometros)) {
             log.showError(this.nombre + " no tiene la suficiente energía para poder volar los " + kilometros + " kilometros");
@@ -31,6 +33,7 @@ abstract class Ave {
         return energia;
     }
 
+    @Override
     public int obtenerKmsRecorridos() {
         log.showInfo("Los kilometros recorridos de " + this.nombre + " son " + kmsRecorridos);
         return kmsRecorridos;
